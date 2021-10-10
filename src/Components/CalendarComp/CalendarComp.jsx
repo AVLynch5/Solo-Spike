@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 //import the calendar
 import Calendar from "react-calendar";
+//import moment
+import moment from "moment";
 
 function CalendarComp(){
     //useState
@@ -8,8 +10,12 @@ function CalendarComp(){
 
     function onChange(nextValue) {
         setValue(nextValue);
-        const dateToDisplay=
-        alert(nextValue);
+        const dateToDisplay=(moment(nextValue).format('l'));
+        alert(`The date selected is ${dateToDisplay}`);
+        //const dateToDisplay1=(moment(nextValue[0]).format('l'));//first date selected by user when selectRange true
+        //const dateToDisplay2=(moment(nextValue[1]).format('l'));//2nd date selected by user when selectRange true
+        //alert(`The dates selected are ${dateToDisplay1} and ${dateToDisplay2}`);//display selected dates when selectRange true
+        console.log(typeof dateToDisplay);//test - typeof dateToDisplay = string
     }
 
     return(
@@ -18,6 +24,7 @@ function CalendarComp(){
             <Calendar 
                 onChange={onChange}
                 value={value}
+                //selectRange={true}//when true, user selects 2 dates on calendar. Dates stored in an array nextValue.
             />
 
         </>
@@ -25,3 +32,6 @@ function CalendarComp(){
 }
 
 export default CalendarComp;
+
+//Comments
+//- BIG CHALLENGE - selectRange must be true to select 
