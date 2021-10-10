@@ -1,11 +1,11 @@
 //import the calendar
 import Calendar from "react-calendar";
 
-function Calendar(){
+function CalendarComp(){
     return(
         <>
         </>
     );
 }
 
-export default Calendar;
+export default CalendarComp;
