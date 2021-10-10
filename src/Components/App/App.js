@@ -1,6 +1,6 @@
 import './App.css';
-import Calendar from '../Calendar/CalendarComp';
-import CalendarComp from '../Calendar/CalendarComp';
+import Calendar from '../CalendarComp/CalendarComp';
+import CalendarComp from '../CalendarComp/CalendarComp';
 
 function App() {
   return (
