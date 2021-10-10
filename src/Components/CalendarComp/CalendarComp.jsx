@@ -3,6 +3,11 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 //import moment
 import moment from "moment";
+//import styling
+import 'react-calendar/dist/Calendar.css';
+//import CSS
+import './CalendarComp.css'
+
 
 function CalendarComp(){
     //useState
@@ -21,12 +26,13 @@ function CalendarComp(){
     return(
         <>
             <h1>Calendar</h1>
-            <Calendar 
-                onChange={onChange}
-                value={value}
-                //selectRange={true}//when true, user selects 2 dates on calendar. Dates stored in an array nextValue.
-            />
-
+            <div className="calContainer">
+                <Calendar 
+                    onChange={onChange}
+                    value={value}
+                    //selectRange={true}//when true, user selects 2 dates on calendar. Dates stored in an array nextValue.
+                />
+            </div>
         </>
     );
 }
