@@ -16,7 +16,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-
+//import sweet alerts
+import swal from "sweetalert";
 
 function CalendarComp(){
     //init dateToDisplay - unnecessary, need to pass state var via props for highLight to change onChange
@@ -65,7 +66,7 @@ function CalendarComp(){
     function onChange(nextValue) {
         setValue(nextValue);//change value to next clicked date
         const dateToDisplay=(moment(nextValue).format('l'));
-        alert(`The date selected is ${dateToDisplay}`);//value doesn't update immediately, display formatted nextValue onChange
+        swal(`The date selected is ${dateToDisplay}`);//value doesn't update immediately, display formatted nextValue onChange
         console.log(value);
         //const dateToDisplay1=(moment(nextValue[0]).format('l'));//first date selected by user when selectRange true
         //const dateToDisplay2=(moment(nextValue[1]).format('l'));//2nd date selected by user when selectRange true
