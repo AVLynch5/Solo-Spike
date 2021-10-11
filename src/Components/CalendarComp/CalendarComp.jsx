@@ -52,7 +52,7 @@ function CalendarComp(){
         //const dateToDisplay1=(moment(nextValue[0]).format('l'));//first date selected by user when selectRange true
         //const dateToDisplay2=(moment(nextValue[1]).format('l'));//2nd date selected by user when selectRange true
         //alert(`The dates selected are ${dateToDisplay1} and ${dateToDisplay2}`);//display selected dates when selectRange true
-        console.log(typeof dateToDisplay);//test - typeof dateToDisplay = string
+        console.log(typeof dateToDisplay, dateToDisplay);//test - typeof dateToDisplay = string
     }
 
     return(
