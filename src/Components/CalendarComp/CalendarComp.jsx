@@ -66,7 +66,7 @@ function CalendarComp(){
                 />
             </div>
             <h3>Table</h3>
-            <table>
+            <table className="table">
                 <thead>
                     <tr>
                         <th>Date</th>

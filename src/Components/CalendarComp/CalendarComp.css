@@ -1,4 +1,11 @@
 .react-calendar {
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid black;
+}
+
+table.table {
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid black;
 }
