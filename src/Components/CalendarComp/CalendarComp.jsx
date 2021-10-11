@@ -8,6 +8,14 @@ import 'react-calendar/dist/Calendar.css';
 //import CSS
 import './CalendarComp.css'
 import CalenderCompChild from "../CalendarCompChild/CalendarCompChild";
+//import components for table
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
 
 function CalendarComp(){
@@ -76,19 +84,23 @@ function CalendarComp(){
                 />
             </div>
             <h3>Table</h3>
-            <table className="table">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Number of Drinks</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {dataToShow.map((day) => {
-                        return(<CalenderCompChild key={day.id} day={day} dateToDisplay={moment(value).format('l')} /* need to pass state var via props for var to update onChange *//>)
-                    })}
-                </tbody>
-            </table>
+           <Paper>
+               <TableContainer>
+                    <Table className="table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Date</TableCell>
+                                <TableCell>Number of Drinks</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {dataToShow.map((day) => {
+                                return(<CalenderCompChild key={day.id} day={day} dateToDisplay={moment(value).format('l')} /* need to pass state var via props for var to update onChange *//>)
+                            })}
+                        </TableBody>
+                    </Table>
+               </TableContainer>
+           </Paper>
         </>
     );
 }

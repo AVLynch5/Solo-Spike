@@ -1,14 +1,16 @@
 import moment from "moment";
 import './CalendarCompChild.css';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
 
 function CalenderCompChild({day, dateToDisplay}){
    
     return(
         <>
-           <tr className={moment(day.date).format('l') == dateToDisplay ? 'highLight' : 'filler'}>
-               <td>{moment(day.date).format('l')}</td>
-               <td>{day.drinks}</td>
-            </tr> 
+            <TableRow className={moment(day.date).format('l') == dateToDisplay ? 'highLight' : 'filler'}>
+               <TableCell>{moment(day.date).format('l')}</TableCell>
+               <TableCell>{day.drinks}</TableCell>
+            </TableRow> 
         </>
     );
 }
